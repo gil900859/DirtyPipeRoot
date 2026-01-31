@@ -4,12 +4,15 @@ plugins {
 
 android {
     namespace 'me.weishu.dirtypipecheck'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "me.weishu.dirtypipecheck"
+        
+        // Changed to 28 to support Android 9.0 (Pie) and above
         minSdk 28
-        targetSdk 32
+        
+        targetSdk 33
         versionCode 203
         versionName "2.3"
 
@@ -44,7 +47,6 @@ android {
 }
 
 dependencies {
-
     def appCenterSdkVersion = '4.4.5'
     implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
